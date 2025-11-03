@@ -109,3 +109,58 @@ var person = {
 };
 
 person.get();
+
+
+/*
+
+📘 Topic: apply() Method in JavaScript
+
+Used to call a function immediately and set the value of this manually.
+It is similar to call(), but arguments are given as an array.
+
+functionName.apply(thisValue, [arg1, arg2, ...])
+
+
+🧠 Key Points:
+
+Calls the function right away.
+
+Lets you choose what this refers to.
+
+Arguments are passed inside an array.
+
+Useful when you already have arguments in an array form.
+
+
+💡 Difference Between call() and apply()
+
+| Feature              | `call()`        | `apply()`       |
+| -------------------- | --------------- | --------------- |
+| Runs immediately     | ✅ Yes           | ✅ Yes           |
+| Arguments            | Separate values | Inside an array |
+| Returns new function | ❌ No            | ❌ No            |
+
+💬 Shortcut to Remember:
+
+🗣️ call() = Call now with values
+📦 apply() = Call now with array
+
+
+ */
+
+var person = {
+  firstName: "Nandhakumar",
+  lastName: "Perumal",
+
+  get: function () {
+    console.log("outer: " + this.firstName + " " + this.lastName);
+    var print = function (role,type) {
+      console.log(
+        "inner: " + this.firstName + " " + this.lastName + ". I am a " + role + " in " + type
+      );
+    }.apply(this, ["Developer" , "React"]);
+    
+  },
+};
+
+person.get();
