@@ -66,8 +66,7 @@ Used to call a function immediately and set the value of this manually.
 🧠 Key Points:
 
 Calls the function right away.
-
-Lets you choose what this should be.
+var s you choose what this should be.
 
 Passes arguments one by one.
 
@@ -124,8 +123,7 @@ functionName.apply(thisValue, [arg1, arg2, ...])
 🧠 Key Points:
 
 Calls the function right away.
-
-Lets you choose what this refers to.
+var s you choose what this refers to.
 
 Arguments are passed inside an array.
 
@@ -147,14 +145,13 @@ Useful when you already have arguments in an array form.
 
 
  */
-
-var person = {
+let  person = {
   firstName: "Nandhakumar",
   lastName: "Perumal",
 
   get: function () {
     console.log("outer: " + this.firstName + " " + this.lastName);
-    var print = function (role,type) {
+  let print = function (role,type) {
       console.log(
         "inner: " + this.firstName + " " + this.lastName + ". I am a " + role + " in " + type
       );
@@ -164,3 +161,6 @@ var person = {
 };
 
 person.get();
+
+
+// in arrow function  
