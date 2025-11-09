@@ -62,3 +62,33 @@ new Promise((resolve, reject) => {
 ✅ Use Promises to manage asynchronous operations **without callback hell**.
 ✅ Promise chaining allows sequential async operations.
 ⚠️ Always use `catch()` at the end to handle errors.
+
+
+
+
+```isHalwathere = false;
+
+function waitInQueuw() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isHalwathere) {
+        resolve("Buy 1 KG halwa");
+      } else {
+        reject("My Bad sorry");
+      }
+    }, 3000);
+  });
+}
+
+async function buyHalwa() {
+  try {
+    let result = await waitInQueuw();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+buyHalwa();
+
+```

@@ -109,3 +109,31 @@ person.get();
 * 🔗 `bind()` → Save function for later with fixed `this`.
 * ⚡ `call()` → Execute immediately with custom `this`.
 * 📦 `apply()` → Execute immediately using an argument array.
+
+
+
+```
+function addingItem (){
+  var items = 0
+  return {
+    add: function(){
+      console.log("item added to cart ! ");
+      items++;
+    }  
+    ,getcounting: function(){
+      return items+" Total items!"
+    }
+  }
+}
+
+let cart = addingItem();
+
+cart.add();
+console.log(cart.getcounting())
+
+cart.add();
+console.log(cart.getcounting())
+cart.add();
+console.log(cart.getcounting())
+
+```
