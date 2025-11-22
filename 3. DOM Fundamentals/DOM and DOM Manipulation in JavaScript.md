@@ -47,4 +47,5 @@ oldPara.remove();
 
 💡 **Tip:**
 ✅ DOM manipulation allows dynamic and interactive web pages.
-⚠️ Over-manipulation can affect performance; use wisely with event delegation when needed.
+⚠️ Over-manipulation  can affect performance; use wisely with event delegation when needed.
+ 
